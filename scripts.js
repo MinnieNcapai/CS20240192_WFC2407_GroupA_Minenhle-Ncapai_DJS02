@@ -7,3 +7,9 @@ form.addEventListener("submit", (event) => {
   const { dividend, divider } = Object.fromEntries(entries);
   result.innerText = dividend / divider;
 });
+
+//Scenario:  Validation when values are missing
+if (!dividend || !divider) {
+  result.innerText = "Division not performed. Both values are required in inputs. Try again.";
+  return;
+    };

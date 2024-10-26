@@ -6,7 +6,7 @@ form.addEventListener("submit", (event) => {
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
   result.innerText = dividend / divider;
-});
+
 
 //Scenario:  Validation when values are missing
 if (!dividend || !divider) {
@@ -31,3 +31,8 @@ if (isNaN(dividendNumber) || isNaN(dividerNumber)) {
   console.error("Something critical went wrong");
   return;
 }
+
+// Perform the division and display the result (rounded down to the nearest integer)
+result.innerText = Math.floor(dividendNumber / dividerNumber);
+
+});

@@ -24,3 +24,10 @@ if (dividerNumber === 0) {
   console.error("Error: Division by zero is not allowed.");
   return;
   }
+
+//Scenario: Providing anything that is not a number should crash the program 
+if (isNaN(dividendNumber) || isNaN(dividerNumber)) {
+  document.body.innerHTML =  "<h4>Something critical went wrong. Please reload the page</h4>";
+  console.error("Something critical went wrong");
+  return;
+}
